@@ -1,9 +1,12 @@
 from playsound import playsound
 import eel
 from engine.config import ASSISTANT_NAME
+from engine.helper import extract_yt_term
 
 from engine.command import speak
 import os
+
+import pywhatkit as kit
 
 #playing assistant sound function
 @eel.expose
@@ -22,3 +25,10 @@ def openCommand(query):
         os.system("start "+query)
     else:
         speak("not found")
+        
+        
+        
+def PlayYoutube(query):
+    search_term = extract_yt_term(query)
+    speak("Playing "+search_term+" on YouTube")
+    kit.playonyt(search_term)

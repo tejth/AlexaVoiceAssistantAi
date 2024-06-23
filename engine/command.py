@@ -51,6 +51,9 @@ def allCommands(message=1):
    if "open" in query:
        from engine.features import openCommand
        openCommand(query)
+   elif "on youtube":
+        from engine.features import PlayYoutube
+        PlayYoutube(query)
    else:
        print("not run")
    eel.ShowHood();
