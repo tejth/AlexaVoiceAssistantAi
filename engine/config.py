@@ -1,1 +1,1 @@
-ASSISTANT_NAME ="Eco"
+ASSISTANT_NAME ="Alexa"
