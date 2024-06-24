@@ -121,3 +121,6 @@ cursor = con.cursor()
 # results = cursor.fetchall()
 # print(results[0][0])
 
+query = "INSERT INTO contacts VALUES (null,'sparsh ', '8126244177',null)"
+cursor.execute(query)
+con.commit()

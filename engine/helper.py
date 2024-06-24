@@ -22,3 +22,5 @@ def remove_words(input_string, words_to_remove):
     result_string = ' '.join(filtered_words)
 
     return result_string
+
+
