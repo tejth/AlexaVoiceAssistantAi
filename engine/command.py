@@ -4,6 +4,7 @@ import eel
 import time
 
 def speak(text):
+    text=str(text)
     engine = pyttsx3.init('sapi5')
     voices = engine.getProperty('voices') 
     engine.setProperty('voice', voices[1].id)
@@ -94,7 +95,7 @@ def allCommands(message=1):
                     whatsApp(contact_no, query, message, name)
 
         else:
-            from engine.features import chatBot
+            from engine.features import chatBot  #importing chatbot  
             chatBot(query)
     except:
         print("error")
